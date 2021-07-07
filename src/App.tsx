@@ -17,7 +17,7 @@ enum BeaconConnection {
 
 const App = () => {
   const [Tezos, setTezos] = useState<TezosToolkit>(
-    new TezosToolkit("https://api.tez.ie/rpc/florencenet")
+    new TezosToolkit("https://api.tez.ie/rpc/mainnet")
   );
   const [contract, setContract] = useState<any>(undefined);
   const [publicToken, setPublicToken] = useState<string | null>("");
@@ -29,8 +29,8 @@ const App = () => {
   const [beaconConnection, setBeaconConnection] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>("transfer");
 
-  // Florencenet Increment/Decrement contract
-  const contractAddress: string = "KT1XCAdyQsHuNTkeLJes7R3krmGhtsmoBvNz";
+  // Mainnet Thank You Token contract
+  const contractAddress: string = "KT1FR9ij18K3dDExgFMBs7ppxfdGYzHiPo7c";
 
   const generateQrCode = (): { __html: string } => {
     const qr = qrcode(0, "L");
@@ -43,9 +43,9 @@ const App = () => {
   if (publicToken && (!userAddress || isNaN(userBalance))) {
     return (
       <div className="main-box">
-        <h1>Taquito Boilerplate</h1>
+        <h1>Thank You Tokens</h1>
         <div id="dialog">
-          <header>Try the Taquito Boilerplate App!</header>
+          <header>Send a Thank You Token!</header>
           <div id="content">
             <p className="text-align-center">
               <i className="fas fa-broadcast-tower"></i>&nbsp; Connecting to
@@ -92,8 +92,8 @@ const App = () => {
   } else if (userAddress && !isNaN(userBalance)) {
     return (
       <div className="main-box">
-        <h1>Taquito Boilerplate</h1>
-        <div id="tabs">
+        <h1>Thank You Tokens</h1>
+        {/* <div id="tabs">
           <div
             id="transfer"
             className={activeTab === "transfer" ? "active" : ""}
@@ -108,7 +108,7 @@ const App = () => {
           >
             Interact with a contract
           </div>
-        </div>
+        </div> */}
         <div id="dialog">
           <div id="content">
             {activeTab === "transfer" ? (
@@ -137,7 +137,7 @@ const App = () => {
             <p>
               <i className="far fa-file-code"></i>&nbsp;
               <a
-                href={`https://better-call.dev/florencenet/${contractAddress}/operations`}
+                href={`https://better-call.dev/mainnet/${contractAddress}/operations`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -171,7 +171,7 @@ const App = () => {
     return (
       <div className="main-box">
         <div className="title">
-          <h1>Taquito Boilerplate</h1>
+          <h1>Thank You Tokens</h1>
           <a href="https://app.netlify.com/start/deploy?repository=https://github.com/ecadlabs/taquito-boilerplate">
             <img
               src="https://www.netlify.com/img/deploy/button.svg"
@@ -180,24 +180,13 @@ const App = () => {
           </a>
         </div>
         <div id="dialog">
-          <header>Welcome to Taquito Boilerplate App!</header>
+          <header>Welcome to the Thank You Tokens dApp!</header>
           <div id="content">
-            <p>Hello!</p>
             <p>
-              This is a template Tezos dApp built using Taquito. It's a starting
-              point for you to hack on and build your own dApp for Tezos.
+              Send a Thank You Token to someone that helped you out!
               <br />
-              If you have not done so already, go to the{" "}
-              <a
-                href="https://github.com/ecadlabs/taquito-boilerplate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Taquito boilerplate Github page
-              </a>{" "}
-              and click the <em>"Use this template"</em> button.
             </p>
-            <p>Go forth and Tezos!</p>
+            <p></p>
           </div>
           <ConnectButton
             Tezos={Tezos}

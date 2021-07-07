@@ -43,17 +43,17 @@ const ConnectButton = ({
     setUserBalance(balance.toNumber());
     // creates contract instance
     const contract = await Tezos.wallet.at(contractAddress);
-    const storage: any = await contract.storage();
-    setContract(contract);
-    setStorage(storage.toNumber());
+    // const storage: any = await contract.storage();
+    // setContract(contract);
+    // setStorage(storage.toNumber());
   };
 
   const connectWallet = async (): Promise<void> => {
     try {
       await wallet.requestPermissions({
         network: {
-          type: NetworkType.FLORENCENET,
-          rpcUrl: "https://api.tez.ie/rpc/florencenet"
+          type: NetworkType.MAINNET,
+          rpcUrl: "https://api.tez.ie/rpc/mainnet"
         }
       });
       // gets user's address
