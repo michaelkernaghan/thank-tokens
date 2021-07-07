@@ -118,7 +118,7 @@ const ConnectButton = ({
           <i className="fas fa-wallet"></i>&nbsp; Connect with wallet
         </span>
       </button>
-      <button className="button" disabled={loadingNano} onClick={connectNano}>
+      {/* <button className="button" disabled={loadingNano} onClick={connectNano}>
         {loadingNano ? (
           <span>
             <i className="fas fa-spinner fa-spin"></i>&nbsp; Loading, please
@@ -129,7 +129,7 @@ const ConnectButton = ({
             <i className="fab fa-usb"></i>&nbsp; Connect with Ledger Nano
           </span>
         )}
-      </button>
+      </button> */}
     </div>
   );
 };
