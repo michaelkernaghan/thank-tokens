@@ -172,12 +172,8 @@ const App = () => {
       <div className="main-box">
         <div className="title">
           <h1>Thank You Tokens</h1>
-          {/* <a href="https://app.netlify.com/start/deploy?repository=https://github.com/michaelkernaghan/thank-tokens">
-            <img
-              src="https://www.netlify.com/img/deploy/button.svg"
-              alt="netlify-button"
-            />
-          </a> */}
+          <a href="https://app.crunchy.network/#/farms?q=thank&f=farm&f=garden">Farm Thank You Tokens</a> 
+          <a href="https://quipuswap.com/swap?from=tez&to=KT1FR9ij18K3dDExgFMBs7ppxfdGYzHiPo7c_0">Buy Thank You Tokens</a> 
         </div>
         <div id="dialog">
           {/* <header>Send a Thank You Token to someone that helped you out!</header> */}
