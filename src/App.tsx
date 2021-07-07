@@ -172,21 +172,21 @@ const App = () => {
       <div className="main-box">
         <div className="title">
           <h1>Thank You Tokens</h1>
-          <a href="https://app.netlify.com/start/deploy?repository=https://github.com/ecadlabs/taquito-boilerplate">
+          {/* <a href="https://app.netlify.com/start/deploy?repository=https://github.com/michaelkernaghan/thank-tokens">
             <img
               src="https://www.netlify.com/img/deploy/button.svg"
               alt="netlify-button"
             />
-          </a>
+          </a> */}
         </div>
         <div id="dialog">
-          <header>Welcome to the Thank You Tokens dApp!</header>
+          {/* <header>Send a Thank You Token to someone that helped you out!</header> */}
           <div id="content">
-            <p>
+            {/* <p>
               Send a Thank You Token to someone that helped you out!
               <br />
-            </p>
-            <p></p>
+            </p> */}
+            {/* <p></p> */}
           </div>
           <ConnectButton
             Tezos={Tezos}
