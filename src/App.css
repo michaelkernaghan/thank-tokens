@@ -53,6 +53,7 @@ header {
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
+  text-align:center  
 }
 
 .buttons {
